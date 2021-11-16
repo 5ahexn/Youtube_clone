@@ -4,8 +4,8 @@
 :root {
     /* Color */
     --white-color: #fff;
-    --black-color: #140a00;
-    --blue-color: #045fd4;
+    --black-color: #030303;
+    --blue-color: #065fd4;
     --red-color: #ff0000;
     --grey-dark-color: #909090;
     --grey-light-color: #e0e0e0;
@@ -44,23 +44,43 @@ button:focus {
 
 /* header */
 header {
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--padding);
-    background-color: var(--black-color);
-    color: var(--white-color);
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
 
 header .logo {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: var(--font-large);
 }
 
-header .logo i {
+header .logo .title i {
     color: var(--red-color);
 }
 
-header .icons .fa-search {
-    margin-right: var(--padding);
+header .search {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .search .fas:first-child {
+    margin-right: 22px;
+}
+
+header .login {
+    color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+    padding: var(--padding);
 }
 
 /* Video Player */
@@ -68,7 +88,8 @@ header .icons .fa-search {
     position: sticky;
     top: 0;
     text-align: center;
-    background-color: var(--black-color);
+    background-color: var(--white-color);
+    padding: var(--padding);
 }
 
 .player video {
@@ -78,6 +99,10 @@ header .icons .fa-search {
 }
 
 body > .info {
+    padding: var(--padding);
+}
+
+.info .metadata {
     padding: var(--padding);
 }
 
@@ -186,7 +211,7 @@ body > .info {
 
 /* Up Next */
 .upNext {
-    padding: 0 var(--padding);
+    padding: var(--padding);
 }
 
 .upNext > .title {
